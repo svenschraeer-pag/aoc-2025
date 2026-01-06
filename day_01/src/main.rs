@@ -82,7 +82,7 @@ fn solve_part_two(input_lines: Lines<BufReader<File>>) {
 }
 
 fn main() {
-    let path = Path::new("./day_01/input.txt");
+    let path: &Path = Path::new("./day_01/input.txt");
     dbg!(path.display());
     let input_lines = read_lines(path).expect("input.txt should be included");
     //solve_part_one(input_lines);
