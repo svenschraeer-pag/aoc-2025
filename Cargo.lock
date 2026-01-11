@@ -110,8 +110,15 @@ dependencies = [
 name = "day_04"
 version = "0.1.0"
 dependencies = [
+ "grid",
  "shared",
 ]
+
+[[package]]
+name = "grid"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f9e2d4c0a8296178d8802098410ca05d86b17a10bb5ab559b3fb404c1f948220"
 
 [[package]]
 name = "is_terminal_polyfill"
