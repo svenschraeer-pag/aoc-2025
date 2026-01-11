@@ -1,8 +1,7 @@
-use shared::read_lines;
+use shared::solve_puzzel_with_given_args;
 use std::{
     fs::File,
     io::{BufReader, Lines},
-    path::Path,
 };
 
 fn get_highest_joltage(line: String) -> u32 {
@@ -75,7 +74,9 @@ fn calculate_joltage_of_line(highest_digits_in_order_of_appearance: Vec<u32>) ->
         .into_iter()
         .map(|digit| char::from_digit(digit, 10).expect("all digits must be valid for base 10"))
         .collect::<String>();
-    number_string.parse::<u64>().expect("Number string should fit to u64")
+    number_string
+        .parse::<u64>()
+        .expect("Number string should fit to u64")
 }
 
 fn get_highest_joltage_from_line_with_battery_count(line: String, battery_count: usize) -> u64 {
@@ -130,9 +131,5 @@ fn solve_part_two(input_lines: Lines<BufReader<File>>) {
 }
 
 fn main() {
-    let path = Path::new("./day_03/input.txt");
-    let input_lines = read_lines(path).expect("input.txt should be included");
-
-    //solve_part_one(input_lines);
-    solve_part_two(input_lines);
+    solve_puzzel_with_given_args("3", solve_part_one, solve_part_two);
 }
