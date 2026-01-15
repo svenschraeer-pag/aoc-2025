@@ -115,6 +115,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "day_05"
+version = "0.1.0"
+dependencies = [
+ "shared",
+]
+
+[[package]]
 name = "grid"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
